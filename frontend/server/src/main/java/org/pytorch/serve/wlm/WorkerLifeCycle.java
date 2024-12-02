@@ -199,13 +199,15 @@ public class WorkerLifeCycle {
                 outReader.start();
             }
 
+	    while (true) {
             if (latch.await(2, TimeUnit.MINUTES)) {
                 if (!success) {
                     throw new WorkerInitializationException("Backend stream closed.");
                 }
                 return;
             }
-            throw new WorkerInitializationException("Backend worker startup time out.");
+	    }
+            //throw new WorkerInitializationException("Backend worker startup time out.");
         } catch (IOException e) {
             throw new WorkerInitializationException("Failed start worker process", e);
         } finally {
@@ -272,13 +274,15 @@ public class WorkerLifeCycle {
                 outReader.start();
             }
 
+	    while(true) {
             if (latch.await(2, TimeUnit.MINUTES)) {
                 if (!success) {
                     throw new WorkerInitializationException("Backend stream closed.");
                 }
                 return;
             }
-            throw new WorkerInitializationException("Backend worker startup time out.");
+	    }
+            //throw new WorkerInitializationException("Backend worker startup time out.");
         } catch (IOException e) {
             throw new WorkerInitializationException("Failed start worker process", e);
         } finally {

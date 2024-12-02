@@ -19,7 +19,7 @@ from ts.protocol.otf_message_handler import create_load_model_response, retrieve
 
 MAX_FAILURE_THRESHOLD = 5
 SOCKET_ACCEPT_TIMEOUT = 30.0
-DEBUG = False
+DEBUG = True
 BENCHMARK = os.getenv("TS_BENCHMARK") in ["True", "true", "TRUE"]
 LOCAL_RANK = int(os.getenv("LOCAL_RANK", 0))
 WORLD_SIZE = int(os.getenv("WORLD_SIZE", 0))

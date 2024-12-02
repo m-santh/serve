@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
 public class AsyncWorkerThread extends WorkerThread {
     // protected ConcurrentHashMap requestsInBackend;
     protected static final Logger logger = LoggerFactory.getLogger(AsyncWorkerThread.class);
-    protected static final long WORKER_TIMEOUT = 2L;
+    protected static final long WORKER_TIMEOUT = 20L;
 
     protected boolean loadingFinished;
     protected CountDownLatch latch;

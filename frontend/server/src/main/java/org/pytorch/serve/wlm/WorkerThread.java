@@ -51,7 +51,7 @@ public class WorkerThread implements Runnable {
     protected static final int[] BACK_OFF = {
         0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597
     };
-    protected static final long WORKER_TIMEOUT = 2L;
+    protected static final long WORKER_TIMEOUT = 20L;
     protected static final ModelRequestEncoder ENCODER =
             new ModelRequestEncoder(ConfigManager.getInstance().getPreferDirectBuffer());
     protected final IMetric workerThreadTimeMetric;
